@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>github操作</title>
+      <link href="/2022/08/24/github%E6%93%8D%E4%BD%9C/"/>
+      <url>/2022/08/24/github%E6%93%8D%E4%BD%9C/</url>
+      
+        <content type="html"><![CDATA[<h1 id="github操作——本地项目上传至github仓库"><a href="#github操作——本地项目上传至github仓库" class="headerlink" title="github操作——本地项目上传至github仓库"></a>github操作——本地项目上传至github仓库</h1><h2 id="全局部署GitHub用户名和密码"><a href="#全局部署GitHub用户名和密码" class="headerlink" title="全局部署GitHub用户名和密码"></a>全局部署GitHub用户名和密码</h2><pre><code>git config --global user.name [输入你的用户名]git config --global user.email [输入你的邮箱]</code></pre><hr><h2 id="初始化本地项目文件夹"><a href="#初始化本地项目文件夹" class="headerlink" title="初始化本地项目文件夹"></a>初始化本地项目文件夹</h2><pre><code>git init</code></pre><hr><h2 id="将文件提交到暂存区"><a href="#将文件提交到暂存区" class="headerlink" title="将文件提交到暂存区"></a>将文件提交到暂存区</h2><pre><code>git add .</code></pre><hr><h2 id="查看本地提交状态"><a href="#查看本地提交状态" class="headerlink" title="查看本地提交状态"></a>查看本地提交状态</h2><pre><code>git status</code></pre><hr><h2 id="把文件提交到本地仓库"><a href="#把文件提交到本地仓库" class="headerlink" title="把文件提交到本地仓库"></a>把文件提交到本地仓库</h2><pre><code>git commit -m &quot;文件备注&quot; </code></pre><hr><h2 id="连接远程仓库"><a href="#连接远程仓库" class="headerlink" title="连接远程仓库"></a>连接远程仓库</h2><pre><code>git remote add origin &quot;远程仓库地址&quot;</code></pre><hr><h2 id="上传代码到GitHub仓库"><a href="#上传代码到GitHub仓库" class="headerlink" title="上传代码到GitHub仓库"></a>上传代码到GitHub仓库</h2><pre><code>git push -u origin master </code></pre><hr>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Markdown的常用语法</title>
       <link href="/2022/08/23/Markdown%E7%9A%84%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/"/>
       <url>/2022/08/23/Markdown%E7%9A%84%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/</url>
