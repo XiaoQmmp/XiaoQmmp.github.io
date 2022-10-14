@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, XiaoQ">
+    <meta name="keywords" content="学习笔记-ES6, XiaoQ">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | XiaoQ</title>
+    <title>学习笔记-ES6 | XiaoQ</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">学习笔记-ES6</h1>
                 </div>
             </div>
         </div>
@@ -429,12 +429,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/ES6/">
+                                <span class="chip bg-color">ES6</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                Web前端
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -443,7 +456,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-08-19
+                    2022-08-23
                 </div>
                 
 
@@ -464,19 +477,50 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span>
+                <h1 id="ES6学习日记"><a href="#ES6学习日记" class="headerlink" title="ES6学习日记"></a>ES6学习日记</h1><h2 id="var-let-const"><a href="#var-let-const" class="headerlink" title="var let const"></a>var let const</h2><pre class=" language-javascript"><code class="language-javascript">    <span class="token keyword">var</span>
+        <span class="token comment" spellcheck="true">//1.声明提升    </span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//undefined    </span>
+        <span class="token keyword">var</span> num <span class="token operator">=</span> <span class="token number">123</span>  
+        <span class="token comment" spellcheck="true">//2.变量覆盖  </span>
+        <span class="token keyword">var</span> num1 <span class="token operator">=</span> <span class="token number">12</span>  
+        <span class="token keyword">var</span> num1 <span class="token operator">=</span> <span class="token number">34</span>  
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>num1<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 34  </span>
+        <span class="token comment" spellcheck="true">//3.没有块级作用域  </span>
+            <span class="token keyword">function</span> <span class="token function">fn2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//1 2</span>
+                <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+                console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//3</span>
+            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+            <span class="token function">fn2</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    
+
+    <span class="token keyword">let</span>
+        <span class="token number">1</span>、定义变量，可以被修改
+        <span class="token number">2</span>、不能重复声明
+        <span class="token number">3</span>、块级作用域
+        <span class="token number">4</span>、声明之后可以立马赋值也可使用时赋值
+        <span class="token number">5</span>、不存在变量提升
+        <span class="token number">6</span>、暂时性死区：在代码块内使用，变量声明之前，该变量都不能使用
+        
+    <span class="token keyword">const</span>
+        <span class="token number">1</span>、定义常量，不能被修改
+        <span class="token number">2</span>、声明之后必须赋值，否则就报错
+        <span class="token number">3</span>、支持<span class="token keyword">let</span>的其他属性
+        <span class="token keyword">const</span> DEMO <span class="token operator">=</span> <span class="token number">123</span>
+        <span class="token comment" spellcheck="true">// DEMO =321</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>DEMO<span class="token punctuation">)</span><span class="token punctuation">;</span>  
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server
+<h2 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h2><pre class=" language-javascript"><code class="language-javascript">    <span class="token comment" spellcheck="true">//运用解构方式将值互换</span>
+        <span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> b <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+        <span class="token punctuation">[</span>a<span class="token punctuation">,</span> b<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>b<span class="token punctuation">,</span> a<span class="token punctuation">]</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate
+<h2 id="快速去重"><a href="#快速去重" class="headerlink" title="快速去重"></a>快速去重</h2><pre class=" language-javascript"><code class="language-javascript">    <span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">23</span><span class="token punctuation">,</span> <span class="token number">34</span><span class="token punctuation">,</span> <span class="token number">34</span><span class="token punctuation">,</span> <span class="token number">45</span><span class="token punctuation">]</span>
+    <span class="token keyword">let</span> item <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span><span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">]</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
                 
             </div>
@@ -503,7 +547,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://XiaoQmmp.github.io/2022/08/19/hello-world/">http://XiaoQmmp.github.io/2022/08/19/hello-world/</a>
+                    <a href="http://XiaoQmmp.github.io/2022/08/23/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-ES6/">http://XiaoQmmp.github.io/2022/08/23/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-ES6/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -540,7 +584,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/ES6/">
+                                    <span class="chip bg-color">ES6</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -586,13 +634,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/08/23/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-ES6/">
+                <a href="/2022/08/23/Markdown%E7%9A%84%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="学习笔记-ES6">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Markdown的常用语法">
                         
-                        <span class="card-title">学习笔记-ES6</span>
+                        <span class="card-title">Markdown的常用语法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -607,23 +655,11 @@
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    Web前端
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            XiaoQ
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/ES6/">
-                        <span class="chip bg-color">ES6</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -632,7 +668,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2022/08/19/hello-world/">
@@ -662,7 +698,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
